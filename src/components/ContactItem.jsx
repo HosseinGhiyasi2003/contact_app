@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import imgAvatar from "../assets/react.svg";
+import userImg from "../assets/user.png";
 
 function ContactItem({ firstName, lastName, phone, email, img }) {
   return (
     <Link>
       <div className="flex p-2.5 gap-x-5 cursor-pointer bg-white overflow-hidden border-b-2 border-b-[#edf1f3] hover:bg-[#dcdbdb] transition-all">
-        <img src={imgAvatar} alt="" />
+        <img className="size-15 rounded-full" src={img || userImg} alt="" />
         <div>
           <h3 className="text-[16px] font-semibold">
             {firstName + " " + lastName}
