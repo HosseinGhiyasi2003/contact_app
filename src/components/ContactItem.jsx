@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import userImg from "../assets/user.png";
 
-function ContactItem({ firstName, lastName, phone, email, img }) {
+function ContactItem({ firstName, lastName, phone, email, img, id }) {
   return (
-    <Link>
+    <Link to={`/contact-details/${id}`}>
       <div className="flex p-2.5 gap-x-5 cursor-pointer bg-white overflow-hidden border-b-2 border-b-[#edf1f3] hover:bg-[#dcdbdb] transition-all">
         <img className="size-15 rounded-full" src={img || userImg} alt="" />
         <div>

@@ -23,7 +23,7 @@ useEffect(() => {
       <Wrapper>
         <Sidebar />
         <div className="w-[550px] p-5">
-          <SearchBox />
+          {/* <SearchBox /> */}
           <ContactList />
         </div>
       </Wrapper>

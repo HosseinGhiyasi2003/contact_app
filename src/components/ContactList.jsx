@@ -13,7 +13,7 @@ function ContactList() {
   }, []);
 
   return (
-    <div>
+    <div className="-mt-20">
       {loading ? (
         <div className="flex justify-center max-w-[300px]">
           <ClipLoader
@@ -22,6 +22,10 @@ function ContactList() {
             size={35}
             speedMultiplier={1}
           />
+        </div>
+      ) : contacts.length === 0 ? (
+        <div className="text-center mt-20 text-gray-500 font-medium">
+          No contacts yet...
         </div>
       ) : (
         <div className="max-w-[300px] mt-20 border-2 border-[#edf1f3] rounded-xl overflow-hidden overflow-y-auto max-h-[400px]">
